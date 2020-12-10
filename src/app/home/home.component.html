@@ -3,22 +3,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8 offset-md-2">
-				<h3>Angular 6 Template-Driven Form Validation</h3>
 				<form name="form" (ngSubmit)="navigation.form.valid && onSubmit()" #navigation="ngForm" novalidate>
-					<div class="form-group">
-						<label for="firstName">First Name</label>
-						<input type="text" class="form-control" name="firstName" [(ngModel)]="model.firstName" #firstName="ngModel" [ngClass]="{ 'is-invalid': navigation.submitted && firstName.invalid }" required />
-						<div *ngIf="navigation.submitted && firstName.invalid" class="invalid-feedback">
-							<div *ngIf="firstName.errors.required">First Name is required</div>
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="lastName">Last Name</label>
-						<input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" [ngClass]="{ 'is-invalid': navigation.submitted && lastName.invalid }" required />
-						<div *ngIf="navigation.submitted && lastName.invalid" class="invalid-feedback">
-							<div *ngIf="lastName.errors.required">Last Name is required</div>
-						</div>
-					</div>
 					<div class="form-group">
 						<label for="email">Email</label>
 						<input type="text" class="form-control" name="email" [(ngModel)]="model.email" #email="ngModel" [ngClass]="{ 'is-invalid': navigation.submitted && email.invalid }" required email />
